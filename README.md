@@ -1,1 +1,1 @@
-# detect-covid-19-in-xray-images
+# Detect Covid-19 In X-Ray Images

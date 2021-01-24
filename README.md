@@ -3,6 +3,7 @@
 This projects aims to detect Covid-19 using Deep Learning in x-ray images.
 
 Python packages used:
+- Tensorflow
 - Keras
 - Scikit Learn
 - Numpy

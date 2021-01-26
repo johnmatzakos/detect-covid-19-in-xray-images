@@ -2,6 +2,10 @@
 
 This projects aims to detect Covid-19 using Deep Learning in x-ray images.
 
+Machine Learning techniques used:
+- Deep Learning
+- Convolutional Neural Networks
+
 Python libraries used:
 - Tensorflow
 - Keras
@@ -9,9 +13,5 @@ Python libraries used:
 - Numpy
 - Matplotlib
 - Seaborn
-
-Machine Learning techniques used:
-- Deep Learning
-- Convolutional Neural Networks
 
 Status: In Progress

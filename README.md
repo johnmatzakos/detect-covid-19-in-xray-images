@@ -9,6 +9,7 @@ Machine Learning techniques used:
 Python libraries used:
 - Tensorflow
 - Keras
+- Open CV
 - Scikit Learn
 - Numpy
 - Matplotlib

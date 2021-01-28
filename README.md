@@ -16,6 +16,7 @@ Python libraries used:
 - Seaborn
 
 Results:
+
               precision    recall  f1-score   support
 
        covid       1.00      0.80      0.89         5

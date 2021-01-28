@@ -53,4 +53,4 @@ execute_visualization(epochs, trained_model)
 
 # Serialize the model, save it for deployment
 print("Saving model...")
-model.save("covid19_vgg16_model(without freeze)", save_format="h5")
+model.save("covid19_vgg16_model", save_format="h5")

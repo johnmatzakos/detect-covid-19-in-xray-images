@@ -40,7 +40,7 @@ model = get_model_head(model)
 model = compile_model(model, learning_rate, epochs)
 
 # freeze all vgg-16 layers so only the custom model hear will be trained
-# model = freeze_layers(model)
+model = freeze_layers(model)
 
 # training the CNN Model
 trained_model = train_model(model, trainX, trainY, testX, testY, batch_size, epochs)

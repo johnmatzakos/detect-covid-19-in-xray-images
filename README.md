@@ -1,10 +1,6 @@
 # Detect Covid-19 In X-Ray Images
 
-This projects aims to detect Covid-19 using Deep Learning in x-ray images.
-
-Machine Learning techniques used:
-- Deep Learning
-- Convolutional Neural Networks
+This projects aims to detect Covid-19 using Deep Learning in x-ray images. Initially, VGG-16 convolutional neural network is used to perform this classification task. In the future the perfromance of other neural networks will be studied.
 
 Python libraries used:
 - Tensorflow
@@ -13,7 +9,6 @@ Python libraries used:
 - Scikit Learn
 - Numpy
 - Matplotlib
-- Seaborn
 
 Results:
 

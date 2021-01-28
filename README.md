@@ -21,7 +21,6 @@ Results:
 
        covid       1.00      0.80      0.89         5
       normal       0.83      1.00      0.91         5
-
     accuracy                           0.90        10
    macro avg       0.92      0.90      0.90        10
 weighted avg       0.92      0.90      0.90        10

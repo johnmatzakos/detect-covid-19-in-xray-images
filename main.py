@@ -1,34 +1,56 @@
 # Author: John Matzakos
 
-from data_preprocessing import *
+from sklearn.model_selection import train_test_split
+
 from data_mining import *
-from data_evaluation import *
+from data_preprocessing import *
+from evaluation import *
+from information_visualization import *
 
-# Defining paths
-training_set_path = "data/train"
-test_set_path = "data/test"
+# Defining dataset based on working directory
+dataset_path = "dataset"
 
-# CNN Architecture
-model = custom_cnn()
+# Declare And Initialize Parameters
+# basic parameters
+weights = "imagenet"
+include_top = False
+height = 224
+width = 224
+number_of_channels = 3
+number_of_classes = 2
+# hyperparameters
+learning_rate = 1e-3
+epochs = 25
+batch_size = 8
 
-# Getting parameters
-model.summary()
+# Data Preprocessing Phase
+(data, labels, lb) = execute_data_preprocessing(dataset_path, height, width)
 
-# Data Preprocessing
-train_datagen = train_data_moulding()
-test_datagen = test_data_moulding()
+# Split the dataset into training set (80%) and test set (20%)
+(trainX, testX, trainY, testY) = train_test_split(data, labels, test_size=0.20, stratify=labels, random_state=42)
 
-train_generator = train_generator(train_datagen)
-test_generator = test_generator(test_datagen)
+# Data Mining Phase
+# load VGG-16 CNN model
+model = vgg_16(weights, include_top, height, width, number_of_channels, number_of_classes)
 
-# Data Mining: Training CNN Model
-hist_new = train_model(model, train_generator, test_generator)
+# place the model head on top of the basic model
+model = get_model_head(model)
 
-# Getting summary
-print(hist_new.history)
+# compile the constructed model
+model = compile_model(model, learning_rate, epochs)
 
-# Data Evaluation
-evaluate(model, train_generator, test_generator, test_set_path)
+# freeze all vgg-16 layers so only the custom model hear will be trained
+# model = freeze_layers(model)
 
-# Save model for deployment
-model.save("covid-19_cnn_model.h5")
+# training the CNN Model
+trained_model = train_model(model, trainX, trainY, testX, testY, batch_size, epochs)
+
+# Evaluation Phase
+execute_evaluation(model, testX, testY, batch_size, lb)
+
+# Information Visualization Phase
+execute_visualization(epochs, trained_model)
+
+# Serialize the model, save it for deployment
+print("Saving model...")
+model.save("covid19_vgg16_model(without freeze)", save_format="h5")

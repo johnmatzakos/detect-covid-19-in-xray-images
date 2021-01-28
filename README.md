@@ -27,8 +27,8 @@ Results:
     macro avg       0.92      0.90     0.90       10
     weighted avg    0.92      0.90     0.90       10
 
-acc: 0.90
-sensitivity: 0.80
-specificity: 1.00
+- accuracy:     0.90
+- sensitivity:  0.80
+- specificity:  1.00
 
 Status: In Progress

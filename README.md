@@ -12,6 +12,7 @@ Python libraries used:
 
 Parameters used in this version:
 - Dataset size: 50 x-ray images (25 'covid', 25 'normal')
+- Training / Test split ratio: 80% / 20%
 - Number of training epochs: 25
 - Batch size: 8
 

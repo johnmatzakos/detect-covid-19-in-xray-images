@@ -15,6 +15,7 @@ Results:
 - Sensitivity:  0.80
 - Specificity:  1.00
 - Classification report:
+
               precision    recall  f1-score   support
 
        covid       1.00      0.80      0.89       5

@@ -11,7 +11,10 @@ Python libraries used:
 - Matplotlib
 
 Results:
-
+- Accuracy:     0.90
+- Sensitivity:  0.80
+- Specificity:  1.00
+- Classification report:
               precision    recall  f1-score   support
 
        covid       1.00      0.80      0.89       5
@@ -22,8 +25,6 @@ Results:
     macro avg       0.92      0.90     0.90       10
     weighted avg    0.92      0.90     0.90       10
 
-- accuracy:     0.90
-- sensitivity:  0.80
-- specificity:  1.00
+
 
 Status: In Progress

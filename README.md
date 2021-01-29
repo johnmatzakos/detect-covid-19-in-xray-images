@@ -10,6 +10,30 @@ Python libraries used:
 - Numpy
 - Matplotlib
 
+
+<table border="0">
+ <tr>
+    <td>
+Python libraries used:
+- Tensorflow
+- Keras
+- Open CV
+- Scikit Learn
+- Numpy
+- Matplotlib
+   </td>
+    <td>
+Parameters used in this version:
+- Dataset size: 50 x-ray images (25 'covid', 25 'normal')
+- Training / Test split ratio: 80% / 20%
+- Number of training epochs: 25
+- Batch size: 8
+   </td>
+ </tr>
+</table>
+
+
+
 Parameters used in this version:
 - Dataset size: 50 x-ray images (25 'covid', 25 'normal')
 - Training / Test split ratio: 80% / 20%

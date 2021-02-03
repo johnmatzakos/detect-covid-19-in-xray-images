@@ -11,8 +11,8 @@ Python libraries used:
 - Matplotlib
 
 Dataset sources:
-- For xray images labeled 'covid':   https://github.com/ieee8023/covid-chestxray-dataset by Dr. Joseph Cohen
-- For xray images labeled 'normal':  https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
+- For x-ray images labeled 'covid':   https://github.com/ieee8023/covid-chestxray-dataset by Dr. Joseph Cohen
+- For x-ray images labeled 'normal':  https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
 
 Results:
 - Accuracy:     0.90

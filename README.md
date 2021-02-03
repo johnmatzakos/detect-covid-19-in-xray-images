@@ -10,6 +10,10 @@ Python libraries used:
 - Numpy
 - Matplotlib
 
+Dataset sources:
+- For xray images labeled 'covid':   https://github.com/ieee8023/covid-chestxray-dataset by Dr. Joseph Cohen
+- For xray images labeled 'normal':  https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
+
 Results:
 - Accuracy:     0.90
 - Sensitivity:  0.80

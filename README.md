@@ -29,10 +29,4 @@ Results:
       accuracy                         0.90     10
       macro avg    0.92      0.90      0.90     10
       weighted avg 0.92      0.90      0.90     10
-    
-    
-
-
-
-
-Status: In Progress
+  

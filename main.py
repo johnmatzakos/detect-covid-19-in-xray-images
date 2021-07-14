@@ -8,7 +8,7 @@ from evaluation import *
 from information_visualization import *
 
 # Defining dataset based on working directory
-dataset_path = "dataset"
+dataset_path = "data"
 
 # Declare And Initialize Parameters
 # basic parameters

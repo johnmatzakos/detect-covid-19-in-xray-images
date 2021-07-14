@@ -2,7 +2,7 @@
 
 This projects aims to detect Covid-19 using Deep Learning in x-ray images. Initially, VGG-16 convolutional neural network is used to perform this classification task. In the future the perfromance of other neural networks will be studied.
 
-Python libraries used:
+### Python libraries used:
 - Tensorflow
 - Keras
 - Open CV
@@ -10,11 +10,11 @@ Python libraries used:
 - Numpy
 - Matplotlib
 
-Dataset sources:
+### Dataset sources:
 - For x-ray images labeled 'covid':   https://github.com/ieee8023/covid-chestxray-dataset by Dr. Joseph Cohen
 - For x-ray images labeled 'normal':  https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
 
-Results:
+### Results:
 - Accuracy:     0.90
 - Sensitivity:  0.80
 - Specificity:  1.00
@@ -30,3 +30,8 @@ Results:
       macro avg    0.92      0.90      0.90     10
       weighted avg 0.92      0.90      0.90     10
   
+### Installation of dependencies:
+
+```
+pip install -r installation/requirements.txt
+```

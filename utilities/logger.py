@@ -12,7 +12,7 @@ def setup_logger(name):
     handler = logging.StreamHandler(sys.stdout)
     handler.setFormatter(formatter)
     # save log in a file
-    filehandler = logging.FileHandler(r'Logs/propaganda-recognition-log.txt')
+    filehandler = logging.FileHandler(r'Logs/detect-covid-19-in-xray-images-log.txt')
     filehandler.setFormatter(formatter)
     # setup logger
     logger = logging.getLogger(name)

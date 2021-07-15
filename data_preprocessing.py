@@ -9,6 +9,10 @@ from sklearn.preprocessing import LabelBinarizer
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.utils import to_categorical
 
+from utilities import logger
+
+log = logger.setup_logger("data-preprocessing")
+
 
 def execute_data_preprocessing(dataset_path, height, width):
     (data, labels) = load_swap_resize(dataset_path, height, width)
@@ -19,11 +23,13 @@ def execute_data_preprocessing(dataset_path, height, width):
     # convert the data and labels to NumPy arrays while scaling the pixel intensities to the range [0, 1]
     (data, labels) = image_to_numpy_array(data, labels)
 
+    log.info("Data preprocessing phase executed.")
+
     return data, labels, lb
 
 
 def load_swap_resize(dataset_path, height, width):
-    print("Loading images...")
+    log.info("Loading images...")
     # get the list of images in the dataset directory
     image_paths = list(paths.list_images(dataset_path))
     data = []

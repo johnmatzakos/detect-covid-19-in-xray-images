@@ -13,6 +13,9 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import Adam
 
 from data_preprocessing import data_augmentator
+from utilities import logger
+
+log = logger.setup_logger("data-mining")
 
 
 def custom_cnn():
@@ -66,8 +69,8 @@ def vgg_16(weights, include_top, height, width, number_of_channels, number_of_cl
     model = VGG16(weights=weights, include_top=include_top,
                   input_tensor=Input(shape=(height, width, number_of_channels)), classes=number_of_classes)
 
-    # Get model summary
-    print(model.summary())
+    log.info("Loaded VGG16 Convolutional Neural Network.")
+
     return model
 
 
@@ -86,6 +89,8 @@ def get_model_head(model):
     # place the head model on top of the base model
     model = Model(inputs=model.input, outputs=headModel)
 
+    log.info("Constructed a new model head for the VGG16 Convolutional Neural Network.")
+
     return model
 
 
@@ -97,6 +102,8 @@ def freeze_layers(model):
     """
     for layer in model.layers:
         layer.trainable = False
+
+    log.info("Froze all layers of the base model.")
 
     return model
 
@@ -114,12 +121,14 @@ def compile_model(model, learning_rate, epochs):
 
     model.compile(loss=keras.losses.binary_crossentropy, optimizer=opt, metrics=["accuracy"])
 
+    log.info("Compiled VGG16 Convolutional Neural Network.")
+
     return model
 
 
 # Training the model
 def train_model(model, trainX, trainY, testX, testY, batch_size, epochs):
-    print("Training head model...")
+    log.info("Training head model...")
 
     rotation_range = 15
     fit_model = "nearest"

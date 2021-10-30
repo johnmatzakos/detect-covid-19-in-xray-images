@@ -12,7 +12,7 @@ log.info("Start of Execution\n\n\t\t\t\t---------- PROPAGANDA RECOGNITION: SETUP
 start_time = time.time()
 
 # install the required python modules
-# pip install dependencies.txt
+# pip3 freeze > requirements.txt
 
 # stop calculating execution time
 end_time = time.time()
